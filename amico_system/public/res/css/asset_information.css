@@ -1,0 +1,659 @@
+body {
+    color: #404E67;
+    background: #F5F7FA;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pageTitle {
+    margin-top: 20px;
+    font-size: 1vw;
+    text-align: left;
+    display: inline;
+}
+
+.header {
+    height: 5vw;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+p {
+    margin-left: 9%;
+    margin-right: 30px;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 3vw;
+    display: inline;
+    /* Add this line to make the second <p> inline */
+}
+
+.form-control[readonly] {
+    border: none;
+    /* Remove borders */
+    background: none;
+    /* Remove background */
+    box-shadow: none;
+    /* Remove any box shadow (if any) */
+    outline: none;
+    /* Remove the focus outline */
+}
+
+
+/* 
+#csv {
+    display: block;
+} */
+
+
+.container {
+    width: 95%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.table-wrapper {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.table-title {
+    padding-bottom: 10px;
+    margin: 0 0 10px;
+}
+
+.table-title h2 {
+    margin: 6px 0 0;
+    font-size: 22px;
+}
+
+.row {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.table-title .add-new {
+    background-color: #000080;
+    float: right;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+}
+
+.table-title .leave-note {
+    background-color: #e4d802;
+    float: right;
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+    margin-right: 1%;
+}
+
+.table-title .add-new i {
+    margin-right: 4px;
+}
+
+table.table {
+    table-layout: fixed;
+}
+
+table.table tr th,
+table.table tr td {
+    border-color: #e9e9e9;
+    font-size: 1.1vw;
+}
+
+table.table th i {
+    font-size: 13px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+table.table th {
+    height: 90px;
+}
+
+table.table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    /* Hide overflowing content */
+    text-overflow: ellipsis;
+    /* Display ellipsis (...) for overflowing text */
+}
+
+.item {
+    background-color: none;
+    border: none;
+}
+
+/* .dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: auto; 
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+} */
+
+.dropdown-td {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    /* Adjust the width as needed */
+}
+
+.dropdown-content:hover {
+    white-space: normal;
+    max-width: none;
+    z-index: 9999;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    left: 0;
+    top: 100%;
+}
+
+
+table.table td a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 5px;
+    min-width: 24px;
+}
+
+table.table td a.add {
+    color: #27C46B;
+}
+
+table.table td a.edit {
+    color: #FFC107;
+}
+
+table.table td a.delete {
+    color: #E34724;
+}
+
+table.table td i {
+    font-size: 19px;
+}
+
+table.table td a.add i {
+    font-size: 24px;
+    margin-right: -1px;
+    position: relative;
+    top: 3px;
+}
+
+/* 
+table.table .form-control {
+    height: 32px;
+    line-height: 32px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+table.table .form-control.error {
+    border-color: #f50000;
+} */
+
+table.table td .add {
+    display: none;
+}
+
+
+
+/* PAGES */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    /* Hide horizontal overflow */
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    /* Enable snapping to sections */
+}
+
+.section {
+    min-width: 100vw;
+    /* Each section fills the entire viewport width */
+    min-height: 100vh;
+    /* Each section fills the entire viewport height */
+    scroll-snap-align: start;
+    /* Snap each section to the start of the viewport */
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    font-size: 2rem;
+}
+
+
+nav {
+
+    --primaryColor: #000080;
+    --secondaryColor: white;
+    --primaryTextColor: black;
+    --secondaryTextColor: #dcf4ff;
+    --bg: #292c30;
+    --nav: white;
+
+
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 1%;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+    background-color: white;
+}
+
+nav a {
+    width: 200px;
+    text-align: center;
+    height: 40px;
+    font-size: 14px;
+
+    cursor: pointer;
+    color: #000080;
+    background-color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000080;
+    border-radius: 35px;
+    display: flex;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    transition: color 0.2s ease;
+}
+
+nav a {
+
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 0;
+    position: relative;
+
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: #444;
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active {
+    color: var(--primaryTextColor);
+}
+
+nav a.active::after {
+    background: linear-gradient(45deg,
+            var(--secondaryColor),
+            var(--primaryColor));
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    border-radius: 35px;
+    left: 0;
+    transform: skewX(0);
+    animation: active 0.2s ease;
+}
+
+.entry {
+    display: block;
+}
+
+
+
+/* popup */
+#user {
+    display: none;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.blur-in {
+    -webkit-animation: blur 2s forwards;
+    -moz-animation: blur 2s forwards;
+    -o-animation: blur 2s forwards;
+    animation: blur 2s forwards;
+}
+
+.blur-out {
+    -webkit-animation: blur-out 2s forwards;
+    -moz-animation: blur-out 2s forwards;
+    -o-animation: blur-out 2s forwards;
+    animation: blur-out 2s forwards;
+}
+
+@-webkit-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-moz-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-o-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-webkit-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@-moz-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@-o-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+
+
+.pop-up {
+    background-color: #404E67;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 90%;
+    border: 3px solid #000080;
+    z-index: 2;
+    /*infront of text*/
+    display: none;
+    /* Initially hide the pop-up */
+    overflow-y: scroll;
+}
+
+.entry {
+    background-color: #404E67;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    width: 100%;
+    /* Ensure the div takes up the full width of its parent */
+    height: max-content;
+    /* Ensure the div takes up the full height of its parent */
+}
+
+svg {
+
+    width: 300px;
+}
+
+path {
+    fill: none;
+    stroke: url(#linearGradient);
+    ;
+    stroke-width: 10;
+    stroke-dasharray: 240 1386;
+    stroke-dashoffset: 0;
+}
+
+
+
+label {
+    text-align: left;
+    color: #c2c2c5;
+    display: block;
+    font-size: 13px;
+    height: 16px;
+    width: 100%;
+}
+
+
+.inputForm {
+    margin-left: 15%;
+    background: transparent;
+    border: 0;
+    color: #f2f2f2;
+    font-size: 20px;
+    height: 40px;
+    line-height: 30px;
+    outline: none !important;
+    width: 100%;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+}
+
+#submit {
+    color: #707075;
+    margin-top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    transition: color 300ms;
+
+}
+
+#submit:focus {
+    color: #f2f2f2;
+    border-color: #f2f2f2;
+}
+
+#submit:active {
+    color: #d0d0d2;
+    border-color: #d0d0d2;
+}
+
+.close-button {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+/* 
+active page */
+#active_page {
+    color: white;
+    background: var(--primaryColor);
+    bottom: 0px;
+    border-radius: 35px;
+    left: 0;
+    transform: skewX(0);
+    animation: active 0.2s ease;
+    margin-left: 10px;
+    margin-right: 10px;
+ 
+}
+
+#active_tab{
+    color: black;
+    background: linear-gradient(45deg,
+            var(--secondaryColor),
+            var(--primaryColor));
+    bottom: 0px;
+    border-radius: 35px;
+    left: 0;
+    transform: skewX(0);
+    animation: active 0.2s ease;
+}

@@ -1,0 +1,32 @@
+.accept{
+    background-color: #128b40;
+    color: white;
+    /* float: right; */
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+    display: inline;
+}
+
+.decline{
+    background-color: red;
+    color: white;
+    /* float: right; */
+    height: 30px;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: none;
+    min-width: 100px;
+    border-radius: 50px;
+    line-height: 13px;
+    margin-left: 1%;
+    display: inline;
+}
+
+.serial_no{
+    display: inline;
+}
